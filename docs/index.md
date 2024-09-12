@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Manasa Kudumu"
-  text: "an accessibility and design concious developer's portfolio"
+  text: "an accessibility and design concious developer"
   tagline: "a 6.1040 production"
   actions:
     - theme: brand

@@ -5,4 +5,4 @@ layout: doc
 
 # Assignment 1
 
-Write some cool stuff here!
+First assignment A1

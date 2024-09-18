@@ -7,8 +7,8 @@ layout: doc
 
 Assignment 1: Social Media Needfinding
 
-Hunch
-“How might I design a social media app for people with visual impairments, particularly in elderly age groups? I want to be able to help an underserved community stay connected with others in their community and be able to learn and perform tasks  a sighted person could do with social media”
+1. Hunch
+“How might I design a social media app for people with visual impairments, particularly in elderly age groups? I want to be able to help an underserved community stay connected with others in their community and be able to learn and perform tasks a sighted person could do with social media”
 
 The “who” and the “why”
 I wish to interview two blind people (those in their 50’s, 60’s, and 70’s) who have used social media in the past. Dino is a 61 year old man who has been blind his whole life. He has used apps like Facebook (along with Messenger), LinkedIn, Twitter, Myspace, and very little of Mastodon. Sheri is a 53 year old woman who had sight but became completely blind a couple of years ago. She has used apps like Facebook, MySpace, and Youtube when she was sighted and also when she became blind.
@@ -27,5 +27,5 @@ I recruited participants via emailing disability organizations in the boston are
 
 The interview process
 I interviewed 2 people with visual impairments, Dino and Sheri (expanded more later in the section). These are the links to the questions I asked them and also some notes I took during the interview. There are more detailed notes further down this page. 
-Dino interview notes: A1: Needfinding - Dino
-Sheri’s interview notes: A1: Needfinding- Sheri
+Dino interview notes:[A1: Needfinding - Dino](https://docs.google.com/document/d/170otM-AH38uf5A3_LtiznRsTd_8buBoF-gMXoyBLzZ4/edit)
+Sheri’s interview notes: [A1: Needfinding - Sheri](https://docs.google.com/document/d/1O3Awv7jwsRzLFwJMR2wUyjO0jKBuOFi1O5osYhgW1IA/edit)

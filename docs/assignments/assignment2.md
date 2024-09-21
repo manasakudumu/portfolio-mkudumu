@@ -5,7 +5,7 @@ layout: doc
 
 # Assignment 2
 
-1. Broad application goals.
+**1. Broad application goals.**
     - App ame: Noor - it means “light” in Arabic, symbolizing the idea of shining a light to and illuminating the digital world for visually impaired users.
     - Description of intended audience: The app is designed specifically for people with visual impairments, with a particular focus on elderly individuals in this community.
     - Value beyond other apps: After conducting interviews with Dino and Sheri, two elderly blind participants, it became clear that mainstream apps like Facebook claim to be accessible, but they fall short in practice. Noor will fill this gap by providing an app for the visually impaired, focusing on features like streamlined screen reader navigation, accurate AI image descriptions, voice command functionality, and more other accessibility features that cater to the needs of elderly users as well. Noor wants to offer a more intuitive, enjoyable, and representative way for our users to connect with family and friends.
@@ -17,14 +17,14 @@ layout: doc
      *Figure 1: Dino (he/him) walking through Discord with his screenreader where he talks about his issues with CAPTCHA security verification being inaccessible to visually impaired users (not pictures)*
      <br>
 
-2. Scrapbook of comparables.
+**2. Scrapbook of comparables.**
 <img src="./images/seniorSafety.jpeg" alt="BeMyEyes Example" width="200px">
 *Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 <img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="200px">
 *Figure 1: Example of Be My Eyes App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 
 
-3. Brainstorming feature ideas.
+**3. Brainstorming feature ideas.**
     - Alt text on audio descriptions on photos and videos- All images uploaded on the platform come with AI-generated audio descriptions that provide detailed context about the contents of the image, including objects, scenery, and any people present.
     - Audio based notifications Notifications for messages, likes, and comments are read aloud to users through the app, allowing them to stay updated without relying on visual cues.
     - Feed filters- be able to change to only see friends and fam - Users can customize their social feed to prioritize posts from specific people (like close family or friends) or filter out less relevant content, ensuring they stay connected with the most important updates.
@@ -41,7 +41,7 @@ layout: doc
     - Voice command navigation 
     - Labeled buttons- Make sure all buttons and navigation tabs are labeled for better screen reader experience
 
-4. VSD analysis.
+**4. VSD analysis.**
     1. Stakeholders: Direct and Indirect Users
         - Observation: Direct stakeholders are elderly, visually impaired individuals who will interact with Noor for social engagement. Indirect stakeholders include family members, caregivers, and emergency responders. Caregivers may need access to some user data to provide proper assistance, raising privacy concerns.
         - Design Response: Creating a permission-based privacy information sharing system where users can choose specific information (e.g., location, emergency contacts) to be shared with caregivers.
@@ -59,9 +59,9 @@ layout: doc
         - Design Response: Implement community moderation tools and structured group discussion formats that prioritize inclusivity and constructive interaction. Noor could also provide users with tools to manage notifications and interactions to avoid overload, while promoting positive social engagement.
 
 
-5. Storyboarding and sketching.
+**5. Storyboarding and sketching.**
 <img src="./images/flow1.jpg" alt="Flow 1" width="500px">
-<br>>
+<br>
 <img src="./images/flow2.jpg" alt="Flow 2" width="500px">
 <br>
 <img src="./images/flow3.jpg" alt="Flow 3" width="500px">

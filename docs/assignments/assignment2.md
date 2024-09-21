@@ -21,10 +21,7 @@ layout: doc
 *Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 <img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="200px">
 *Figure 2: Example of Be My Eyes App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/shorts/H0lp93rspf0" frameborder="0" allowfullscreen></iframe>
-*Video 1: Access to list of resources people with visual disabilities could use on Be My Eyes.
-<br>
+
 
 **3. Brainstorming feature ideas.**
     - Alt text on audio descriptions on photos and videos- All images uploaded on the platform come with AI-generated audio descriptions that provide detailed context about the contents of the image, including objects, scenery, and any people present.

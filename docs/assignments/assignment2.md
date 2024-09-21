@@ -1,5 +1,5 @@
 ---
-title: Assignment 2
+title: Assignment 2- Divergent Design
 layout: doc
 ---
 
@@ -22,10 +22,10 @@ layout: doc
 
 **2. Scrapbook of comparables.**
 <br>
-<img src="./images/seniorSafety.jpeg" alt="BeMyEyes Example" width="300px">
+<img src="./images/seniorSafety.jpeg" alt="BeMyEyes Example" width="250px">
 *Figure 3: Example of a Senior Safety App. This app showcases an interface designed specifically for elderly users, emphasizing safety features like emergency contacts and quick access buttons. It inspires Noor to prioritize intuitive design for easy navigation, ensuring that vital information is always accessible in case of emergencies.*
-<img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="300px">
-*Figure 4: Be My Eyes connects visually impaired individuals with volunteers for real-time assistance. The simplicity of its interface and the immediacy of support highlights the value of community engagement. Noor can draw from this by integrating similar support but with their friends and famil*
+<img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="250px">
+*Figure 4: Be My Eyes connects visually impaired individuals with volunteers for real-time assistance. The simplicity of its interface and the immediacy of support highlights the value of community engagement. Noor can draw from this by integrating similar support but with their friends and family*
 <img src="./images/snapchat.jpg" alt="SnapChat Example" width="500px">
 *Figure 5: Example of Snapchat location sharing, showcasing how, after giving permissions, locations can be shared with close friends and family. Could Noor adopt a similar feature, enabling elderly users to share their locations with trusted contacts in case of emergencies, ensuring safety while maintaining user control?*
 <img src="./images/qualtricsCAPTCHA.jpg" alt="Accessible CAPTCHA Example" width="500px">

@@ -6,7 +6,6 @@ layout: doc
 # Assignment 2
 
 **1. Broad application goals.**
-    <br>
 - App name: Noor - it means “light” in Arabic, symbolizing the idea of shining a light to and illuminating the digital world for visually impaired users.
 - Description of intended audience: The app is designed specifically for people with visual impairments, with a particular focus on elderly individuals in this community.
 - Value beyond other apps: After conducting interviews with Dino and Sheri, two elderly blind participants, it became clear that mainstream apps like Facebook claim to be accessible, but they fall short in practice. Noor will fill this gap by providing an app for the visually impaired, focusing on features like streamlined screen reader navigation, accurate AI image descriptions, voice command functionality, and more other accessibility features that cater to the needs of elderly users as well. Noor wants to offer a more intuitive, enjoyable, and representative way for our users to connect with family and friends.
@@ -22,7 +21,7 @@ layout: doc
 *Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 <img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="200px">
 *Figure 2: Example of Be My Eyes App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
-<img src="./images/snapchat.jpeg" alt="SnapChat Example" width="200px">
+<img src="./images/snapchat.jpg" alt="SnapChat Example" width="200px">
 *Figure 3: Example of Snapchat location sharing, showcasing how, after giving permissions, locations can be shared with close friends and family*
 <br>
 

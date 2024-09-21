@@ -42,7 +42,7 @@ layout: doc
 - List of 21 Features:
     - Alt text on audio descriptions on photos and videos- All images uploaded on the platform would come with AI-generated audio descriptions that provide detailed context about the contents of the image, including objects, scenery, and any people present.
     - Feed filters- be able to change to only see friends and family - Users can customize their feed to prioritize posts from specific people (like close family or friends) or filter out less relevant content, ensuring they stay connected with the most important updates.
-    - Assistance/ Online status feature: Check to see when someone is online so that you can get quicker responses in cases of emergencies (amongst the elderly)  
+    - Assistance/ online status feature: Check to see when someone is online so that you can get quicker responses in cases of emergencies (amongst the elderly)  
     - Emergency Alerts - In case of an emergency (since the users might be elderly and visually impaired), a signal can be sent to close family members and friends to help them in need.
     - Keep the app simple to not overwhelm elderly individuals - The interface design is streamlined with larger buttons, fewer steps to complete actions, and a clutter-free layout to reduce overwhelm for elderly users.
     - Accessible messaging- The messaging feature will be fully compatible with screen readers, allowing users to easily chat with friends and family.
@@ -56,11 +56,11 @@ layout: doc
     - Voice command navigation 
     - Labeled buttons- Make sure all buttons and navigation tabs are labeled for a better screen reader experience
     - Accessible game plays for entertainment purposes- The app includes a range of simple, accessible games (like audio-based puzzles or memory games) designed to entertain and stimulate users. A feature Sheri, one of my interviewees would love to see.
-    - Text Enlargement and High Contrast Mode: users with low vision or light sensitivity can adjust the text size and enable a high contrast mode for better readability.
-    - Family and Friends Location Sharing: A voluntary feature allowing users to share their real-time location with trusted contacts. This can help in cases where users are lost or need guidance to a specific place.
-    - Onboarding for New Users- guide: A step-by-step, audio-guided onboarding process to help new users (especially the elderly) learn how to use the app, for the users to understand its features without being frustrated.
-    - Daily/ Weekly Check-In: feature where users can confirm they are doing okay by tapping a button or using voice commands. This can automatically notify close family or friends (who are given permission to access this info), providing peace of mind without requiring constant communication.
-    - Summarized Long texts: Using a screenreader to read through lengthy posts can be very time consuming and frustrating. An AI summarization tool could help this process.
+    - Text enlargement and high contrast mode: users with low vision or light sensitivity can adjust the text size and enable a high contrast mode for better readability.
+    - Family and friends location sharing: A feature allowing users to share their real-time location with trusted contacts. This can help in cases where users are lost or need guidance to a specific place.
+    - Onboarding for new users- guide: A step-by-step, audio-guided onboarding process to help new users (especially the elderly) learn how to use the app, for the users to understand its features without being frustrated.
+    - Daily/ weekly check-in: feature where users can confirm they are doing okay by tapping a button or using voice commands. This can automatically notify close family or friends (who are given permission to access this info), providing peace of mind without requiring constant communication.
+    - Summarized long texts: Using a screenreader to read through lengthy posts can be very time consuming and frustrating. An AI summarization tool could help this process.
 <br>
 <br>
 

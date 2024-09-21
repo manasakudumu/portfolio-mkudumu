@@ -3,28 +3,33 @@ title: Assignment 2
 layout: doc
 ---
 
-# Assignment 2
+# Assignment 2: Divergent Design
+<br>
+<br>
 
 **1. Broad application goals.**
 - App name: Noor - it means “light” in Arabic, symbolizing the idea of shining a light to and illuminating the digital world for visually impaired users.
 - Description of intended audience: The app is designed specifically for people with visual impairments, with a particular focus on elderly individuals in this community.
 - Value beyond other apps: After conducting interviews with Dino and Sheri, two elderly blind participants, it became clear that mainstream apps like Facebook claim to be accessible, but they fall short in practice. Noor will fill this gap by providing an app for the visually impaired, focusing on features like streamlined screen reader navigation, accurate AI image descriptions, voice command functionality, and more other accessibility features that cater to the needs of elderly users as well. Noor wants to offer a more intuitive, enjoyable, and representative way for our users to connect with family and friends.
     <img src="./images/fb.jpg" alt="FB example" width="500px">
-    *Figure 1: Dino walking me through all the unlabeled buttons and non-streamlined screenreader naviagation tools on Facebook.*
+    *Figure 1: Dino (he/him) walking me through all the unlabeled buttons and non-streamlined screenreader naviagation tools on Facebook.*
     <br>
      <img src="./images/discord.jpg" alt="Discord example" width="500px"> 
-     *Figure 1: Dino (he/him) walking through Discord with his screenreader where he talks about his issues with CAPTCHA security verification being inaccessible to visually impaired users (not pictures) on Discord.*
+     *Figure 2: Dino walking me through Discord with his screenreader where he talks about his issues with CAPTCHA security verification being inaccessible to visually impaired users (not pictures) on Discord.*
+<br>
 <br>
 
 **2. Scrapbook of comparables.**
 <img src="./images/seniorSafety.jpeg" alt="BeMyEyes Example" width="200px">
-*Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
+*Figure 1: Example of a Senior Safety App. This app showcases an interface designed specifically for elderly users, emphasizing safety features like emergency contacts and quick access buttons. It inspires Noor to prioritize intuitive design for easy navigation, ensuring that vital information is always accessible in case of emergencies.**
 <img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="200px">
-*Figure 2: Example of Be My Eyes App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
-<img src="./images/snapchat.jpg" alt="SnapChat Example" width="200px">
-*Figure 3: Example of Snapchat location sharing, showcasing how, after giving permissions, locations can be shared with close friends and family*
+*Figure 2: Be My Eyes connects visually impaired individuals with volunteers for real-time assistance. The simplicity of its interface and the immediacy of support highlight the value of community engagement. Noor can draw from this by integrating a similar support but with their friends and family*
+<img src="./images/snapchat.jpg" alt="SnapChat Example" width="300px">
+*Figure 3: Example of Snapchat location sharing, showcasing how, after giving permissions, locations can be shared with close friends and family. Could Noor adopt a similar feature, enabling elderly users to share their locations with trusted contacts in case of emergencies, ensuring safety while maintaining user control?*
+<img src="./images/qualtricsCAPTCHA.jpg" alt="Accessible CAPTCHA Example" width="300px">
+*Figure 3: Example of Qualtrics (survey app that a lot of visually impaired users also use) having accessible CAPTCHA security. Can Noor implement something similar for easy use of the app while also maintaing security?*
 <br>
-
+<br>
 
 **3. Brainstorming feature ideas.**
 - List of 21 Features:
@@ -72,10 +77,14 @@ layout: doc
         - Observation: While it could enhance community building among the visually impaired, large-scale adoption might also lead to information overload or the creation of subgroups that foster isolation or conflict.
         - Design Response: Having moderation tools and structured group discussion formats that prioritize inclusivity and constructive interaction. Noor could also provide users with tools to manage audio notifications and interactions to avoid information overload and frustrations.
 <br>
+<br>
 
 **5. Storyboarding and sketching.**
 <img src="./images/flow1.jpg" alt="Flow 1" width="700px">
+*Figure 5: Flow 1: Checking online status and making call for help*
 <br>
 <img src="./images/flow2.jpg" alt="Flow 2" width="700px">
+*Figure 6: Flow 2: Finding online community/ support group forums*
 <br>
 <img src="./images/flow3.jpg" alt="Flow 3" width="700px">
+*Figure 7: Flow 3: AI generated image descriptions*

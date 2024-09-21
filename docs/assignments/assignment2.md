@@ -11,6 +11,9 @@ layout: doc
     - Value beyond other apps: After conducting interviews with Dino and Sheri, two elderly blind participants, it became clear that mainstream apps like Facebook claim to be accessible, but they fall short in practice. Noor will fill this gap by providing an app for the visually impaired, focusing on features like streamlined screen reader navigation, accurate AI image descriptions, voice command functionality, and more other accessibility features that cater to the needs of elderly users as well. Noor wants to offer a more intuitive, enjoyable, and representative way for our users to connect with family and friends.
 
 2. Scrapbook of comparables.
+<img src="./images/seniorSafety.jpeg" alt="Senior Safety Example" width="500px">
+<img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="500px">
+<img src="./images/discord.jpg" alt="Discord example" width="500px">
 
 3. Brainstorming feature ideas.
     - Alt text on audio descriptions on photos and videos- All images uploaded on the platform come with AI-generated audio descriptions that provide detailed context about the contents of the image, including objects, scenery, and any people present.
@@ -45,7 +48,7 @@ layout: doc
 
 
 5. Storyboarding and sketching.
-<img src="./images/flow1.jpg" alt="Flow 1" width="300px">
-<img src="./images/flow2.jpg" alt="Flow 2" width="300px">
-<img src="./images/flow3.jpg" alt="Flow 3" width="300px">
+<img src="./images/flow1.jpg" alt="Flow 1" width="500px">
+<img src="./images/flow2.jpg" alt="Flow 2" width="500px">
+<img src="./images/flow3.jpg" alt="Flow 3" width="500px">
 

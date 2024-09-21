@@ -10,17 +10,18 @@ layout: doc
     - Description of intended audience: The app is designed specifically for people with visual impairments, with a particular focus on elderly individuals in this community.
     - Value beyond other apps: After conducting interviews with Dino and Sheri, two elderly blind participants, it became clear that mainstream apps like Facebook claim to be accessible, but they fall short in practice. Noor will fill this gap by providing an app for the visually impaired, focusing on features like streamlined screen reader navigation, accurate AI image descriptions, voice command functionality, and more other accessibility features that cater to the needs of elderly users as well. Noor wants to offer a more intuitive, enjoyable, and representative way for our users to connect with family and friends.
 
-     <img src="./images/discord.jpg" alt="Discord example" width="500px"> 
-     ---
      <img src="./images/fb.jpg" alt="FB example" width="500px">
-    *Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
+    *Figure 1: Dino walking through all the unlabeled buttons and non-streamlined screenreader naviagation tools *
+    <br>
+     <img src="./images/discord.jpg" alt="Discord example" width="500px"> 
+     *Figure 1: Dino (he/him) walking through Discord with his screenreader where he talks about his issues with CAPTCHA security verification being inaccessible to visually impaired users (not pictures)*
+     <br>
 
 2. Scrapbook of comparables.
-![Senior Safety Example](./images/seniorSafety.jpeg)
+<img src="./images/seniorSafety.jpeg" alt="BeMyEyes Example" width="200px">
 *Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 <img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="200px">
-![Senior Safety Example](./images/seniorSafety.jpeg)
-*Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
+*Figure 1: Example of Be My Eyes App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 
 
 3. Brainstorming feature ideas.
@@ -42,8 +43,8 @@ layout: doc
 
 4. VSD analysis.
     1. Stakeholders: Direct and Indirect Users
-            - Observation: Direct stakeholders are elderly, visually impaired individuals who will interact with Noor for social engagement. Indirect stakeholders include family members, caregivers, and emergency responders. Caregivers may need access to some user data to provide proper assistance, raising privacy concerns.
-            - Design Response: Creating a permission-based privacy information sharing system where users can choose specific information (e.g., location, emergency contacts) to be shared with caregivers.
+        - Observation: Direct stakeholders are elderly, visually impaired individuals who will interact with Noor for social engagement. Indirect stakeholders include family members, caregivers, and emergency responders. Caregivers may need access to some user data to provide proper assistance, raising privacy concerns.
+        - Design Response: Creating a permission-based privacy information sharing system where users can choose specific information (e.g., location, emergency contacts) to be shared with caregivers.
     2. Stakeholders: Variation in Abilities
         - Observation: Noor target audience is elderly individuals with visual impairments, but users may also face other physical challenges like limited hearing or motor skills and have intersectional disabilities. This could affect how they interact with the app.
         - Design Response: Implementing a multimodal accessibility feature, such as offering speech alternatives like touch-based navigation with larger buttons. This would ensure that users with multiple disabilities can still use Noor.
@@ -53,17 +54,14 @@ layout: doc
     4. Time: Long-Term Health and Well-Being 
         - Observation: Regular use of Noor could either improve or degrade long-term mental health and well-being. While it could reduce loneliness through digital interaction, over-reliance on the app for social connections may reduce physical activity and face-to-face socialization, potentially leading to isolation.
         - Design Response: Introduceing a "well-being" tracker to promotes physical and social activity. This will encourage users to engage with the world outside of their phone and plan physical meet-ups with friends and family.
-    5. Pervasiveness: Widespread Use (Prompt 4)
+    5. Pervasiveness: Widespread Use
         - Observation: As Noor gains popularity and widespread use, interactions within its ecosystem may shift. While it could enhance community building among the visually impaired, large-scale adoption might also lead to information overload or the creation of subgroups that foster isolation or conflict.
         - Design Response: Implement community moderation tools and structured group discussion formats that prioritize inclusivity and constructive interaction. Noor could also provide users with tools to manage notifications and interactions to avoid overload, while promoting positive social engagement.
 
 
 5. Storyboarding and sketching.
 <img src="./images/flow1.jpg" alt="Flow 1" width="500px">
----
+<br>>
 <img src="./images/flow2.jpg" alt="Flow 2" width="500px">
----
+<br>
 <img src="./images/flow3.jpg" alt="Flow 3" width="500px">
-
-
-

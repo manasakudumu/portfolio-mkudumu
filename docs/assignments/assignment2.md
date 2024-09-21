@@ -13,7 +13,6 @@ layout: doc
      <img src="./images/discord.jpg" alt="Discord example" width="500px"> 
      ---
      <img src="./images/fb.jpg" alt="FB example" width="500px">
-     ![Senior Safety Example](./images/seniorSafety.jpeg)
     *Figure 1: Example of Senior Safety App, showcasing how it prioritizes elderly users' safety with clear, accessible UI.*
 
 2. Scrapbook of comparables.
@@ -46,17 +45,17 @@ layout: doc
             - Observation: Direct stakeholders are elderly, visually impaired individuals who will interact with Noor for social engagement. Indirect stakeholders include family members, caregivers, and emergency responders. Caregivers may need access to some user data to provide proper assistance, raising privacy concerns.
             - Design Response: Creating a permission-based privacy information sharing system where users can choose specific information (e.g., location, emergency contacts) to be shared with caregivers.
     2. Stakeholders: Variation in Abilities
-            - Observation: Noor target audience is elderly individuals with visual impairments, but users may also face other physical challenges like limited hearing or motor skills and have intersectional disabilities. This could affect how they interact with the app.
-            - Design Response: Implementing a multimodal accessibility feature, such as offering speech alternatives like touch-based navigation with larger buttons. This would ensure that users with multiple disabilities can still use Noor.
+        - Observation: Noor target audience is elderly individuals with visual impairments, but users may also face other physical challenges like limited hearing or motor skills and have intersectional disabilities. This could affect how they interact with the app.
+        - Design Response: Implementing a multimodal accessibility feature, such as offering speech alternatives like touch-based navigation with larger buttons. This would ensure that users with multiple disabilities can still use Noor.
     3. Values: Value Tensions 
-            - Observation: A big value tension Noor might face is between privacy and caregiver oversight. Elderly users may want to maintain their independence and privacy, but caregivers may feel the need for more insight into the user's behavior for safety reasons.
-            - Design Response: Offer different access levels to each person, where users can assign emergency-only access to caregivers or set certain data-sharing permissions (e.g., location sharing only when away from home for extended periods). This balances privacy with safety.
+        - Observation: A big value tension Noor might face is between privacy and caregiver oversight. Elderly users may want to maintain their independence and privacy, but caregivers may feel the need for more insight into the user's behavior for safety reasons.
+        - Design Response: Offer different access levels to each person, where users can assign emergency-only access to caregivers or set certain data-sharing permissions (e.g., location sharing only when away from home for extended periods). This balances privacy with safety.
     4. Time: Long-Term Health and Well-Being 
-            - Observation: Regular use of Noor could either improve or degrade long-term mental health and well-being. While it could reduce loneliness through digital interaction, over-reliance on the app for social connections may reduce physical activity and face-to-face socialization, potentially leading to isolation.
-            - Design Response: Introduceing a "well-being" tracker to promotes physical and social activity. This will encourage users to engage with the world outside of their phone and plan physical meet-ups with friends and family.
+        - Observation: Regular use of Noor could either improve or degrade long-term mental health and well-being. While it could reduce loneliness through digital interaction, over-reliance on the app for social connections may reduce physical activity and face-to-face socialization, potentially leading to isolation.
+        - Design Response: Introduceing a "well-being" tracker to promotes physical and social activity. This will encourage users to engage with the world outside of their phone and plan physical meet-ups with friends and family.
     5. Pervasiveness: Widespread Use (Prompt 4)
-            - Observation: As Noor gains popularity and widespread use, interactions within its ecosystem may shift. While it could enhance community building among the visually impaired, large-scale adoption might also lead to information overload or the creation of subgroups that foster isolation or conflict.
-            - Design Response: Implement community moderation tools and structured group discussion formats that prioritize inclusivity and constructive interaction. Noor could also provide users with tools to manage notifications and interactions to avoid overload, while promoting positive social engagement.
+        - Observation: As Noor gains popularity and widespread use, interactions within its ecosystem may shift. While it could enhance community building among the visually impaired, large-scale adoption might also lead to information overload or the creation of subgroups that foster isolation or conflict.
+        - Design Response: Implement community moderation tools and structured group discussion formats that prioritize inclusivity and constructive interaction. Noor could also provide users with tools to manage notifications and interactions to avoid overload, while promoting positive social engagement.
 
 
 5. Storyboarding and sketching.
@@ -65,4 +64,6 @@ layout: doc
 <img src="./images/flow2.jpg" alt="Flow 2" width="500px">
 ---
 <img src="./images/flow3.jpg" alt="Flow 3" width="500px">
+
+
 

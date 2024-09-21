@@ -29,8 +29,9 @@ layout: doc
 *Figure 3: Example of Snapchat location sharing, showcasing how, after giving permissions, locations can be shared with close friends and family. Could Noor adopt a similar feature, enabling elderly users to share their locations with trusted contacts in case of emergencies, ensuring safety while maintaining user control?*
 <img src="./images/qualtricsCAPTCHA.jpg" alt="Accessible CAPTCHA Example" width="500px">
 *Figure 4: Example of Qualtrics (survey app that a lot of visually impaired users also use) having accessible CAPTCHA security. Can Noor implement something similar for easy use of the app while also maintaing security?*
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H0lp93rspf0" frameborder="0"></iframe>
-*Video 1: Example of Be My Eyes accessible resource collection. How can Noor implement a collection of resources for people with visual impairments*
+
+[Watch Video on YouTube](https://youtube.com/shorts/H0lp93rspf0)
+*Video 1: Example of Be My Eyes accessible resource collection. The simplicity in its features also help elderly individuals. How can Noor implement a collection of resources for people with visual impairments*
 <br>
 <br>
 

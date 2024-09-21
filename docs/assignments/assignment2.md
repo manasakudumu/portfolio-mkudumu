@@ -8,6 +8,7 @@ layout: doc
 <br>
 
 **1. Broad application goals.**
+<br>
 - App name: Noor - it means “light” in Arabic, symbolizing the idea of shining a light on and illuminating the digital world for visually impaired users.
 - Description of intended audience: The app is designed specifically for people with visual impairments, focusing on elderly individuals in this community.
 - Value beyond other apps: After conducting interviews with Dino and Sheri, two elderly blind participants, it became clear that mainstream apps like Facebook claim to be accessible, but they fall short in practice. Noor will fill this gap by providing an app for the visually impaired, focusing on features like streamlined screen reader navigation, accurate AI image descriptions, voice command functionality, and other accessibility features that cater to the needs of elderly users as well. Noor wants to offer a more intuitive, enjoyable, and representative way for our users to connect with family and friends.
@@ -100,6 +101,7 @@ layout: doc
 <br>
 <br>
 <br>
-In conclusion, Noor is designed to empower elderly visually impaired people by prioritizing accessibility, representation, connection, and safety. Noor aims to create an inclusive environment where users can engage with their loved ones and the wider community without barriers.
+In conclusion, Noor is designed to empower elderly visually impaired people by prioritizing accessibility, representation, connection, and safety. Noor aims to create an inclusive environment where users can engage with their loved ones and the wider community without barriers. Noor, Let your light, light up the world!
 <br>
-Noor, Let your light, light up the world!
+<br>
+- Acknowledgements: Thank you to all the TA's for being patient with me and helping me during office hours and recitation!

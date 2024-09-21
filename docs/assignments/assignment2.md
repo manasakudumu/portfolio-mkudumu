@@ -20,14 +20,17 @@ layout: doc
 <br>
 
 **2. Scrapbook of comparables.**
+<br>
 <img src="./images/seniorSafety.jpeg" alt="BeMyEyes Example" width="200px">
-*Figure 1: Example of a Senior Safety App. This app showcases an interface designed specifically for elderly users, emphasizing safety features like emergency contacts and quick access buttons. It inspires Noor to prioritize intuitive design for easy navigation, ensuring that vital information is always accessible in case of emergencies.**
+*Figure 1: Example of a Senior Safety App. This app showcases an interface designed specifically for elderly users, emphasizing safety features like emergency contacts and quick access buttons. It inspires Noor to prioritize intuitive design for easy navigation, ensuring that vital information is always accessible in case of emergencies.*
 <img src="./images/BeMyEyes.jpeg" alt="BeMyEyes Example" width="200px">
 *Figure 2: Be My Eyes connects visually impaired individuals with volunteers for real-time assistance. The simplicity of its interface and the immediacy of support highlight the value of community engagement. Noor can draw from this by integrating a similar support but with their friends and family*
-<img src="./images/snapchat.jpg" alt="SnapChat Example" width="300px">
+<img src="./images/snapchat.jpg" alt="SnapChat Example" width="500px">
 *Figure 3: Example of Snapchat location sharing, showcasing how, after giving permissions, locations can be shared with close friends and family. Could Noor adopt a similar feature, enabling elderly users to share their locations with trusted contacts in case of emergencies, ensuring safety while maintaining user control?*
-<img src="./images/qualtricsCAPTCHA.jpg" alt="Accessible CAPTCHA Example" width="300px">
-*Figure 3: Example of Qualtrics (survey app that a lot of visually impaired users also use) having accessible CAPTCHA security. Can Noor implement something similar for easy use of the app while also maintaing security?*
+<img src="./images/qualtricsCAPTCHA.jpg" alt="Accessible CAPTCHA Example" width="500px">
+*Figure 4: Example of Qualtrics (survey app that a lot of visually impaired users also use) having accessible CAPTCHA security. Can Noor implement something similar for easy use of the app while also maintaing security?*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H0lp93rspf0" frameborder="0" allowfullscreen></iframe>
+*Video 1: Example of Be My Eyes accessible resource collection. How can Noor implement a collection of resources for people with visual impairments*
 <br>
 <br>
 
@@ -54,6 +57,7 @@ layout: doc
     - Onboarding for New Users- guide: A step-by-step, audio-guided onboarding process to help new users (especially the elderly) learn how to use the app, in order for the users to understand its features without being frustrated.
     - Daily/ Weekly Check-In: feature where users can confirm they are doing okay by tapping a button or using voice commands. This can automatically notify close family or friends (who are given permission to access this info), providing peace of mind without requiring constant communication.
     - Summarized Long texts: Using a screenreader to read through lengthy posts can be very time consuming and frustrating. An AI summarization tool could help this process.
+<br>
 <br>
 
 **4. VSD analysis.**
@@ -83,8 +87,10 @@ layout: doc
 <img src="./images/flow1.jpg" alt="Flow 1" width="700px">
 *Figure 5: Flow 1: Checking online status and making call for help*
 <br>
+<br>
 <img src="./images/flow2.jpg" alt="Flow 2" width="700px">
 *Figure 6: Flow 2: Finding online community/ support group forums*
+<br>
 <br>
 <img src="./images/flow3.jpg" alt="Flow 3" width="700px">
 *Figure 7: Flow 3: AI generated image descriptions*

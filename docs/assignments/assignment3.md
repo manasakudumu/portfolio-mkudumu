@@ -170,14 +170,14 @@ Noor, let your light, light up the world!
 
 
 ### App Level & Synchronizations
-Include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
 
+include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
 
-sync register(username: String, password: String, out user: User)
-{
+```
+__sync__ register(username: String, password: String, out user: User)
+
     Authing.register(username, password, user)
-}
-
+```
 
 sync authenticate(username: String, password: String, out user: User)
     Authing.authenticate(username, password, user)

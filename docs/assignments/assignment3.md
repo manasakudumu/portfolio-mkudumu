@@ -28,25 +28,100 @@ Noor, let your light, light up the world!
 
 ### Subsets
 \{Authing\}
+
 \{Posting, Authing\}
+
 \{Commenting, Posting, Authing\}
+
 \{Filtering, Posting, Authing\}
+
 \{Filtering, Commenting, Posting, Authing\}
+
 \{Screenreading, Posting, Authing\}
+
 \{Screenreading, Commenting, Posting, Authing\}
+
 \{Screenreading, Filtering, Posting, Authing\}
+
 \{Screenreading, Filtering, Commenting, Posting, Authing\}
+
 \{Monitoring, Authing\}
+
 \{Alerting, Authing\}
+
 \{Monitoring, Alerting, Authing\}
+
 \{Monitoring, Posting, Authing\}
+
 \{Alerting, Posting, Authing\}
+
 \{Monitoring, Alerting, Posting, Authing\}
 
+
 ### App Level & Synchronizations
+Include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
+
+
+sync: register(username: String, password: String, out user: User)
+Authing.register(username, password, user)
+
+
+sync: authenticate(username: String, password: String, out user: User)
+Authing.authenticate(username, password, user)
+
+
+sync: post(user: User, p: Post)
+Authing.isAuthenticated(user)
+Posting.createPost(user, p)
+Screenreading.labelElement(p)
+
+
+sync: commentOnPost(user: User, postId: Post, comment: Comment)
+Authing.isAuthenticated(user)
+Commenting.commentOnItem(postId, comment)
+Screenreading.labelElement(comment)
+
+
+sync: applyFilter(user: User, settings: Rule)
+Authing.isAuthenticated(user)
+Filtering.applyFilter(settings)
+Posting.filterPosts(settings)
+
+
+sync: activateEmergencyAlert(user: User, location: Coordinates)
+Authing.isAuthenticated(user)
+Monitoring.verifyCheckIn(user)
+Alerting.activateEmergencyAlert(location)
+
+
+sync: checkIn(user: User)
+Authing.isAuthenticated(user)
+Monitoring.recordCheckIn(user)
+
+
+sync: failToCheckIn(user: User, out alert: Boolean)
+Authing.isAuthenticated(user)
+Monitoring.checkFailure(user, alert)
+Alerting.activateEmergencyAlert(location)
+
+
+sync: allowContent(user: User)
+Authing.isAuthenticated(user)
+Filtering.allowContent(user)
+
+
+sync: denyContent(user: User)
+Authing.isAuthenticated(user)
+Filtering.denyContent(user)
+
+
+sync: unregister(user: User)
+Authing.isAuthenticated(user)
+Authing.unregister(user)
+
 
 ## Dependency Diagram:
-<img src="./images/dependencyDiagram.jpg" alt="Dependency Diagram Example" width="300px">
+<img src="./images/dependencyDiagram.jpg" alt="Dependency Diagram Example" width="600px">
 
 
 ## Wireframes

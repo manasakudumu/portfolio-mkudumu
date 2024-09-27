@@ -15,14 +15,14 @@ Noor, let your light, light up the world!
 ## Functional Design
 
 ### Concept 1: Authing
-- Purpose: Authenticates users and ensures login.
-- Operational Principle: After registering with a username, password, and accessible CAPTCHA, users can authenticate and access their accounts.
-- State:
+- **Purpose:** Authenticates users and ensures login.
+- **Operational Principle**: After registering with a username, password, and accessible CAPTCHA, users can authenticate and access their accounts.
+- **State**:
     - registered: set String
     - passwords: registered → one String
     - loggedIn: set String
     - captchas: set String
-- Actions:
+- **Actions**:
     - register (username: String, password: String, captcha: String)
         - username in registered - false
         - registered += username
@@ -37,12 +37,12 @@ Noor, let your light, light up the world!
         - loggedIn -= username
 
 ### Concept 2: Posting
-- Purpose: Enable users to post content (text, image, or video) for others to view.
-- Operational Principle: Users create posts, which are made available in the feed (Posts are accessible via screen reader navigation)
-- State:
+- **Purpose**: Enable users to post content (text, image, or video) for others to view.
+- **Operational Principle**: Users create posts, which are made available in the feed (Posts are accessible via screen reader navigation)
+- **State**:
     - posts: set Post
     - postAccessibility: posts → one AccessibilityData
-- Actions:
+- **Actions**:
     - createPost (content: String, media: Audio/Video, out post: Post)
         - post not in posts
         - posts += post
@@ -52,13 +52,13 @@ Noor, let your light, light up the world!
         - posts -= postId
 
 ### Concept 3: Commenting
-- Purpose: Allow users to comment on posts or other items.
-- Operational Principle: Comments can be added to any "item" (posts, messages). The Commenting concept is abstract and does not directly reference other concepts.
-- State:
+- **Purpose:** Allow users to comment on posts or other items.
+- **Operational Principle**: Comments can be added to any "item" (posts, messages). The Commenting concept is abstract and does not directly reference other concepts.
+- **State:**
     - comments: set Comment
     - commentedOn: comments one-to-one Item
     - replies: comments one-to-many set Comment
-- Actions:
+- **Actions:**
     - commentOnItem (itemId: String, comment: String)
         - comment not in comments
         - comments += comment
@@ -71,9 +71,9 @@ Noor, let your light, light up the world!
         - comments -= commentId
 
 ### Concept 4: Screen-reading
-- Purpose: Makes sure to use voice navigation and ensure that the apps content is not only screen reader accessible but also  
-- Operational Principle: Rather than implementing a separate reading mechanism, the app is structured with clear labels, logical flow, and summarized content to make it easier for screen readers to navigate and present information efficiently.
-- State:
+- **Purpose:** Makes sure to use voice navigation and ensure that the apps content is not only screen reader accessible but also  
+- **Operational Principle**: Rather than implementing a separate reading mechanism, the app is structured with clear labels, logical flow, and summarized content to make it easier for screen readers to navigate and present information efficiently.
+- **State:**
     - contentStructure: set Page
     - ariaRegions: contentStructure one-to-many set ARIA_Regions
     - summarizedContent: posts → one String
@@ -87,12 +87,12 @@ Noor, let your light, light up the world!
         - summarizedContent[postId] := summary
 
 ### Concept 5: Filtering
-- Purpose: Allow users to filter their feed to prioritize content from close friends or family to prevent biases/ harmful stereotypes against the disability community.
-- Operational Principle: Users define rules that determine the visibility of posts and other content in their feed.
-- State:
+- **Purpose:** Allow users to filter their feed to prioritize content from close friends or family to prevent biases/ harmful stereotypes against the disability community.
+- **Operational Principle**: Users define rules that determine the visibility of posts and other content in their feed.
+- **State:**
     - filterSettings: set User one-to-many set Rule
     - priorityGroups: set User
-- Actions:
+- **Actions:**
     - applyFilter (settings: Rule)
         - settings not in filterSettings
         - filterSettings += settings
@@ -101,13 +101,13 @@ Noor, let your light, light up the world!
         - priorityGroups += userId
 
 ### Concept 6: Alerting/Locating
-- Purpose: Allow users to send emergency alerts along with location data to trusted contacts.
-- Operational Principle: after a user faces an emergency, they can share their current location and provide an alert to their trusted contacts in case of emergencies.
-- State:
+- **Purpose:** Allow users to send emergency alerts along with location data to trusted contacts.
+- **Operational Principle**: after a user faces an emergency, they can share their current location and provide an alert to their trusted contacts in case of emergencies.
+- **State:**
     - location: set Coordinates
     - emergencyContacts: set User
     - alertStatus: set Boolean
-- Actions:
+- **Actions:**
     - activateEmergencyAlert (coordinates: Coordinates)
         - alertStatus := true
         - location := coordinates
@@ -118,13 +118,13 @@ Noor, let your light, light up the world!
         - location := coordinates
 
 ### Concept 7: Monitoring
-- Purpose: Ensure that caregivers or family members can periodically check in on the elderly user's well-being by receiving scheduled updates or prompts for user responses.
-- Operational Principle: After setting up trusted contacts, the system monitors the user at regular intervals, prompting them to check in. 
-- State:
+- **Purpose:** Ensure that caregivers or family members can periodically check in on the elderly user's well-being by receiving scheduled updates or prompts for user responses.
+- **Operational Principle**: After setting up trusted contacts, the system monitors the user at regular intervals, prompting them to check in. 
+- **State:**
     - userCheckInStatus: set Boolean
     - checkInSchedule: set DateTime
     - trustedContacts: set User
-- Actions:
+- **Actions:**
     - scheduleCheckIn (userId: String, schedule: DateTime)
         - schedule not in checkInSchedule
         - checkInSchedule[userId] := schedule
@@ -173,60 +173,62 @@ Noor, let your light, light up the world!
 Include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
 
 
-sync: register(username: String, password: String, out user: User)
+sync register(username: String, password: String, out user: User)
+{
     Authing.register(username, password, user)
+}
 
 
-sync: authenticate(username: String, password: String, out user: User)
+sync authenticate(username: String, password: String, out user: User)
     Authing.authenticate(username, password, user)
 
 
-sync: post(user: User, p: Post)
+sync post(user: User, p: Post)
     Authing.isAuthenticated(user)
     Posting.createPost(user, p)
     Screenreading.labelElement(p)
 
 
-sync: commentOnPost(user: User, postId: Post, comment: Comment)
+sync commentOnPost(user: User, postId: Post, comment: Comment)
     Authing.isAuthenticated(user)
     Commenting.commentOnItem(postId, comment)
     Screenreading.labelElement(comment)
 
 
-sync: applyFilter(user: User, settings: Rule)
+sync applyFilter(user: User, settings: Rule)
     Authing.isAuthenticated(user)
     Filtering.applyFilter(settings)
     Posting.filterPosts(settings)
 
 
-sync: activateEmergencyAlert(user: User, location: Coordinates)
+sync activateEmergencyAlert(user: User, location: Coordinates)
     Authing.isAuthenticated(user)
     Monitoring.verifyCheckIn(user)
     Alerting.activateEmergencyAlert(location)
 
 
-sync: checkIn(user: User)
+sync checkIn(user: User)
     Authing.isAuthenticated(user)
     Monitoring.recordCheckIn(user)
 
 
-sync: failToCheckIn(user: User, out alert: Boolean)
+sync failToCheckIn(user: User, out alert: Boolean)
     Authing.isAuthenticated(user)
     Monitoring.checkFailure(user, alert)
     Alerting.activateEmergencyAlert(location)
 
 
-sync: allowContent(user: User)
+sync allowContent(user: User)
     Authing.isAuthenticated(user)
     Filtering.allowContent(user)
 
 
-sync: denyContent(user: User)
+sync denyContent(user: User)
     Authing.isAuthenticated(user)
     Filtering.denyContent(user)
 
 
-sync: unregister(user: User)
+sync unregister(user: User)
     Authing.isAuthenticated(user)
     Authing.unregister(user)
 
@@ -273,4 +275,5 @@ Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Co
            - Allow users to confirm or deny location sharing before sending the alert.
        - **Rationale**: Automatic sharing — In an emergency, time is critical, and the user may not be able to confirm their location manually (after confirming the emergency). Automatic sharing makes sure that help can be sent without delay. Permissions to location access can be given only to trusted contacts to prevent privacy concerns.
 
+<br>
 Acknowledgements: Thank you to all the TAs, particularly TA Sophia for helping me with all my concepts and narrowing down my list along with the dependency diagrams!

@@ -4,7 +4,6 @@ layout: doc
 ---
 
 # Assignment 3- Convergent Design
-<br>
 
 ## Pitch.
 
@@ -15,13 +14,130 @@ Noor, let your light, light up the world!
 
 ## Functional Design
 
-### Concept 1:
-### Concept 2:
-### Concept 3:
-### Concept 4:
-### Concept 5:
-### Concept 6:
-### Concept 7:
+### Concept 1: Authing
+- Purpose: Authenticates users and ensures secure login for visually impaired and elderly users.
+- Operational Principle: After registering with a username, password, and accessible CAPTCHA, users can authenticate and access their accounts.
+- State:
+    - registeredUsers: set String
+    - hashedPasswords: registeredUsers → one String
+    - loggedInUsers: set String
+    - captchas: set String
+- Actions:
+    - register (username: String, password: String, captcha: String)
+    - username in registeredUsers - false
+    - registeredUsers += username
+    - hashedPasswords[username] := hash(password)
+    - captchas += captcha
+    - authenticate (username: String, password: String)
+    - username in registeredUsers
+    - hashedPasswords[username] == hash(password)
+    - loggedInUsers += username
+    - logout (username: String)
+    - username in loggedInUsers
+    - loggedInUsers -= username
+
+### Concept 2: Posting
+- Purpose: Enable users to post content (text, image, or video) for others to view.
+- Operational Principle: Users create posts, which are made available in the feed (Posts are accessible via screen reader navigation)
+- State:
+    - posts: set Post
+    - postAccessibility: posts → one AccessibilityData
+- Actions:
+    - createPost (content: String, media: Audio/Video, out post: Post)
+    - post not in posts
+    - posts += post
+    - postAccessibility[post] := media.accessibilityData
+    - editPost (postId: String, updatedContent: String)
+    - postId in posts
+    - posts[postId].content := updatedContent
+    - deletePost (postId: String)
+    - postId in posts
+    - posts -= postId
+
+### Concept 3: Commenting
+- Purpose: Allow users to comment on posts or other items.
+- Operational Principle: Comments can be added to any "item" (posts, messages). The Commenting concept is abstract and does not directly reference other concepts.
+- State:
+    - comments: set Comment
+    - commentedOn: comments one-to-one Item
+    - replies: comments one-to-many set Comment
+- Actions:
+    - commentOnItem (itemId: String, comment: String)
+    - comment not in comments
+    - comments += comment
+    - commentedOn[comment] := itemId
+    - replyToComment (commentId: String, reply: String)
+    - reply not in replies[commentId]
+    - replies[commentId] += reply
+    - deleteComment (commentId: String)
+    - commentId in comments
+    - comments -= commentId
+
+### Concept 4: Screen-reading
+- Purpose: Makes sure to use voice navigation and ensure that the apps content is not only screen reader accessible but also  
+- Operational Principle: Rather than implementing a separate reading mechanism, the app is structured with clear labels, logical flow, and summarized content to make it easier for screen readers to navigate and present information efficiently.
+- State:
+    - contentStructure: set Page
+    - ariaRegions: contentStructure one-to-many set ARIA_Regions
+    - summarizedContent: posts → one String
+    - accessibleLabels: set Element  → one String
+- Actions
+    - labelElement (elementId: String, label: String)
+    - elementId not in accessibleLabels
+    - accessibleLabels[elementId] := label
+    - generateSummary (postId: String, out summary: String)
+    - postId in posts
+    - summarizedContent[postId] := summary
+
+### Concept 5: Filtering
+- Purpose: Allow users to filter their feed to prioritize content from close friends or family to prevent biases/ harmful stereotypes against the disability community.
+- Operational Principle: Users define rules that determine the visibility of posts and other content in their feed.
+- State:
+    - filterSettings: set User one-to-many set Rule
+    - priorityGroups: set User
+- Actions:
+    - applyFilter (settings: Rule)
+    - settings not in filterSettings
+    - filterSettings += settings
+    - addToPriorityGroup (userId: String)
+    - userId in priorityGroups
+    - priorityGroups += userId
+
+### Concept 6: Alerting/Locating
+- Purpose: Allow users to send emergency alerts along with location data to trusted contacts.
+- Operational Principle: after a user faces an emergency, they can share their current location and provide an alert to their trusted contacts in case of emergencies.
+- State:
+    - location: set Coordinates
+    - emergencyContacts: set User
+    - alertStatus: set Boolean
+- Actions:
+    - activateEmergencyAlert (coordinates: Coordinates)
+    - alertStatus := true
+    - location := coordinates
+    - deactivateEmergencyAlert ()
+    - alertStatus := false
+    - updateLocation (coordinates: Coordinates)
+    - alertStatus == true
+    - location := coordinates
+
+### Concept 7: Monitoring
+- Purpose: Ensure that caregivers or family members can periodically check in on the elderly user's well-being by receiving scheduled updates or prompts for user responses.
+- Operational Principle: After setting up trusted contacts, the system monitors the user at regular intervals, prompting them to check in. 
+- State:
+    - userCheckInStatus: set Boolean
+    - checkInSchedule: set DateTime
+    - trustedContacts: set User
+- Actions:
+    - scheduleCheckIn (userId: String, schedule: DateTime)
+    - schedule not in checkInSchedule
+    - checkInSchedule[userId] := schedule
+    - recordCheckIn (userId: String)
+    - userId in checkInSchedule
+    - userCheckInStatus[userId] := true
+    - alertContacts (userId: String)
+    - userCheckInStatus[userId] == false
+    - notify trustedContacts[userId]
+
 
 
 ## Synchronizations of Concept Actions

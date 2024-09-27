@@ -5,14 +5,18 @@ layout: doc
 
 # Assignment 3- Convergent Design
 
-## Pitch.
+## Pitch:
 
-Noor, meaning “light” in Arabic, was made to shine a light on the social media world for elderly users with visual impairments. The purpose of Noor is to fill in the gaps created by mainstream social media apps like Facebook, Discord, and other social media apps, which struggle to make their features accessible to visually impaired users. Noor prevents frustrations of unlabelled buttons, inaccessible posts, and confusing layouts that these apps are known to possess. By offering emergency alerting, message filtering (to reduce exposure to biases and harmful stereotypes), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. We wish to promote independence while maintaining a sense of support at the same time with the help of location sharing and alerts during emergencies. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
+- **Noor**, meaning “light” in Arabic, was made to shine a light on the social media world for elderly users with visual impairments. The purpose of Noor is to fill in the gaps created by mainstream social media apps like Facebook, Discord, and other social media apps, which struggle to make their features accessible to visually impaired users. Noor **prevents frustrations** of unlabelled buttons, inaccessible posts, and confusing layouts that these apps are known to possess. 
 
-Noor, let your light, light up the world!
+- By offering emergency alerting, message filtering (to reduce exposure to biases and harmful stereotypes), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. 
+
+- We wish to **promote independence** while maintaining a sense of support at the same time with the help of location sharing and alerts during emergencies. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
+
+- Noor, let your light, light up the world!
 <br>
 
-## Functional Design
+## Functional Design:
 
 ### Concept 1: Authing
 - **Purpose:** Authenticates users and ensures login.
@@ -135,41 +139,8 @@ Noor, let your light, light up the world!
         - userCheckInStatus[userId] == false
         - notify trustedContacts[userId]
 
-## Synchronizations of Concept Actions
 
-### Subsets
-\{Authing\}
-
-\{Posting, Authing\}
-
-\{Commenting, Posting, Authing\}
-
-\{Filtering, Posting, Authing\}
-
-\{Filtering, Commenting, Posting, Authing\}
-
-\{Screenreading, Posting, Authing\}
-
-\{Screenreading, Commenting, Posting, Authing\}
-
-\{Screenreading, Filtering, Posting, Authing\}
-
-\{Screenreading, Filtering, Commenting, Posting, Authing\}
-
-\{Monitoring, Authing\}
-
-\{Alerting, Authing\}
-
-\{Monitoring, Alerting, Authing\}
-
-\{Monitoring, Posting, Authing\}
-
-\{Alerting, Posting, Authing\}
-
-\{Monitoring, Alerting, Posting, Authing\}
-
-
-### App Level & Synchronizations
+## Synchronizations of concept actions:
 
 include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
 
@@ -232,10 +203,42 @@ sync unregister(user: User)
     Authing.isAuthenticated(user)
     Authing.unregister(user)
 ```
+<br>
 
-## Dependency Diagram:
+### Dependency Diagram:
 <img src="./images/dependencyDiagram.jpg" alt="Dependency Diagram Example" width="600px">
+<br>
 
+### Subsets
+\{Authing\}
+
+\{Posting, Authing\}
+
+\{Commenting, Posting, Authing\}
+
+\{Filtering, Posting, Authing\}
+
+\{Filtering, Commenting, Posting, Authing\}
+
+\{Screenreading, Posting, Authing\}
+
+\{Screenreading, Commenting, Posting, Authing\}
+
+\{Screenreading, Filtering, Posting, Authing\}
+
+\{Screenreading, Filtering, Commenting, Posting, Authing\}
+
+\{Monitoring, Authing\}
+
+\{Alerting, Authing\}
+
+\{Monitoring, Alerting, Authing\}
+
+\{Monitoring, Posting, Authing\}
+
+\{Alerting, Posting, Authing\}
+
+\{Monitoring, Alerting, Posting, Authing\}
 
 ## Wireframes
 Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Convergent-Design-Wireframes?node-id=0-1&node-type=canvas&t=FoelDIJpfNiUQHZA-0 

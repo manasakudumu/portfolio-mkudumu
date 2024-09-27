@@ -7,7 +7,7 @@ layout: doc
 
 ## Pitch.
 
-Noor, meaning “light” in Arabic, was made to shine a light on the social media world for elderly users with visual impairments. The purpose of Noor is to fill in the gaps created by mainstream social media apps like Facebook, Discord, and other social media apps, which struggle to make their features accessible to visually impaired users. Noor prevents frustrations of unlabelled buttons, inaccessible posts, and confusing layouts that these apps are known to possess. By offering emergency alerting, message filtering (to reduce exposure to biases and harmful stereotypes), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. We wish to promote independence while maintaining a sense of support at the same time with the help of location sharing and alerts during emergencies. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers. 
+Noor, meaning “light” in Arabic, was made to shine a light on the social media world for elderly users with visual impairments. The purpose of Noor is to fill in the gaps created by mainstream social media apps like Facebook, Discord, and other social media apps, which struggle to make their features accessible to visually impaired users. Noor prevents frustrations of unlabelled buttons, inaccessible posts, and confusing layouts that these apps are known to possess. By offering emergency alerting, message filtering (to reduce exposure to biases and harmful stereotypes), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. We wish to promote independence while maintaining a sense of support at the same time with the help of location sharing and alerts during emergencies. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
 
 Noor, let your light, light up the world!
 <br>
@@ -15,26 +15,26 @@ Noor, let your light, light up the world!
 ## Functional Design
 
 ### Concept 1: Authing
-- Purpose: Authenticates users and ensures secure login for visually impaired and elderly users.
+- Purpose: Authenticates users and ensures login.
 - Operational Principle: After registering with a username, password, and accessible CAPTCHA, users can authenticate and access their accounts.
 - State:
-    - registeredUsers: set String
-    - hashedPasswords: registeredUsers → one String
-    - loggedInUsers: set String
+    - registered: set String
+    - passwords: registered → one String
+    - loggedIn: set String
     - captchas: set String
 - Actions:
     - register (username: String, password: String, captcha: String)
-    - username in registeredUsers - false
-    - registeredUsers += username
-    - hashedPasswords[username] := hash(password)
-    - captchas += captcha
+        - username in registered - false
+        - registered += username
+        - passwords[username] := hash(password)
+        - captchas += captcha
     - authenticate (username: String, password: String)
-    - username in registeredUsers
-    - hashedPasswords[username] == hash(password)
-    - loggedInUsers += username
-    - logout (username: String)
-    - username in loggedInUsers
-    - loggedInUsers -= username
+        - username in registered
+        - passwords[username] == hash(password)
+        - loggedIn += username
+        - logout (username: String)
+        - username in loggedIn
+        - loggedIn -= username
 
 ### Concept 2: Posting
 - Purpose: Enable users to post content (text, image, or video) for others to view.
@@ -44,15 +44,12 @@ Noor, let your light, light up the world!
     - postAccessibility: posts → one AccessibilityData
 - Actions:
     - createPost (content: String, media: Audio/Video, out post: Post)
-    - post not in posts
-    - posts += post
-    - postAccessibility[post] := media.accessibilityData
-    - editPost (postId: String, updatedContent: String)
-    - postId in posts
-    - posts[postId].content := updatedContent
+        - post not in posts
+        - posts += post
+        - postAccessibility[post] := media.accessibilityData
     - deletePost (postId: String)
-    - postId in posts
-    - posts -= postId
+        - postId in posts
+        - posts -= postId
 
 ### Concept 3: Commenting
 - Purpose: Allow users to comment on posts or other items.
@@ -63,15 +60,15 @@ Noor, let your light, light up the world!
     - replies: comments one-to-many set Comment
 - Actions:
     - commentOnItem (itemId: String, comment: String)
-    - comment not in comments
-    - comments += comment
-    - commentedOn[comment] := itemId
+        - comment not in comments
+        - comments += comment
+        - commentedOn[comment] := itemId
     - replyToComment (commentId: String, reply: String)
-    - reply not in replies[commentId]
-    - replies[commentId] += reply
+        - reply not in replies[commentId]
+        - replies[commentId] += reply
     - deleteComment (commentId: String)
-    - commentId in comments
-    - comments -= commentId
+        - commentId in comments
+        - comments -= commentId
 
 ### Concept 4: Screen-reading
 - Purpose: Makes sure to use voice navigation and ensure that the apps content is not only screen reader accessible but also  
@@ -83,11 +80,11 @@ Noor, let your light, light up the world!
     - accessibleLabels: set Element  → one String
 - Actions
     - labelElement (elementId: String, label: String)
-    - elementId not in accessibleLabels
-    - accessibleLabels[elementId] := label
+        - elementId not in accessibleLabels
+        - accessibleLabels[elementId] := label
     - generateSummary (postId: String, out summary: String)
-    - postId in posts
-    - summarizedContent[postId] := summary
+        - postId in posts
+        - summarizedContent[postId] := summary
 
 ### Concept 5: Filtering
 - Purpose: Allow users to filter their feed to prioritize content from close friends or family to prevent biases/ harmful stereotypes against the disability community.
@@ -97,11 +94,11 @@ Noor, let your light, light up the world!
     - priorityGroups: set User
 - Actions:
     - applyFilter (settings: Rule)
-    - settings not in filterSettings
-    - filterSettings += settings
+        - settings not in filterSettings
+        - filterSettings += settings
     - addToPriorityGroup (userId: String)
-    - userId in priorityGroups
-    - priorityGroups += userId
+        - userId in priorityGroups
+        - priorityGroups += userId
 
 ### Concept 6: Alerting/Locating
 - Purpose: Allow users to send emergency alerts along with location data to trusted contacts.
@@ -112,13 +109,13 @@ Noor, let your light, light up the world!
     - alertStatus: set Boolean
 - Actions:
     - activateEmergencyAlert (coordinates: Coordinates)
-    - alertStatus := true
-    - location := coordinates
+        - alertStatus := true
+        - location := coordinates
     - deactivateEmergencyAlert ()
-    - alertStatus := false
+        - alertStatus := false
     - updateLocation (coordinates: Coordinates)
-    - alertStatus == true
-    - location := coordinates
+        - alertStatus == true
+        - location := coordinates
 
 ### Concept 7: Monitoring
 - Purpose: Ensure that caregivers or family members can periodically check in on the elderly user's well-being by receiving scheduled updates or prompts for user responses.
@@ -129,16 +126,14 @@ Noor, let your light, light up the world!
     - trustedContacts: set User
 - Actions:
     - scheduleCheckIn (userId: String, schedule: DateTime)
-    - schedule not in checkInSchedule
-    - checkInSchedule[userId] := schedule
+        - schedule not in checkInSchedule
+        - checkInSchedule[userId] := schedule
     - recordCheckIn (userId: String)
-    - userId in checkInSchedule
-    - userCheckInStatus[userId] := true
+        - userId in checkInSchedule
+        - userCheckInStatus[userId] := true
     - alertContacts (userId: String)
-    - userCheckInStatus[userId] == false
-    - notify trustedContacts[userId]
-
-
+        - userCheckInStatus[userId] == false
+        - notify trustedContacts[userId]
 
 ## Synchronizations of Concept Actions
 
@@ -179,61 +174,61 @@ Include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreadi
 
 
 sync: register(username: String, password: String, out user: User)
-Authing.register(username, password, user)
+    Authing.register(username, password, user)
 
 
 sync: authenticate(username: String, password: String, out user: User)
-Authing.authenticate(username, password, user)
+    Authing.authenticate(username, password, user)
 
 
 sync: post(user: User, p: Post)
-Authing.isAuthenticated(user)
-Posting.createPost(user, p)
-Screenreading.labelElement(p)
+    Authing.isAuthenticated(user)
+    Posting.createPost(user, p)
+    Screenreading.labelElement(p)
 
 
 sync: commentOnPost(user: User, postId: Post, comment: Comment)
-Authing.isAuthenticated(user)
-Commenting.commentOnItem(postId, comment)
-Screenreading.labelElement(comment)
+    Authing.isAuthenticated(user)
+    Commenting.commentOnItem(postId, comment)
+    Screenreading.labelElement(comment)
 
 
 sync: applyFilter(user: User, settings: Rule)
-Authing.isAuthenticated(user)
-Filtering.applyFilter(settings)
-Posting.filterPosts(settings)
+    Authing.isAuthenticated(user)
+    Filtering.applyFilter(settings)
+    Posting.filterPosts(settings)
 
 
 sync: activateEmergencyAlert(user: User, location: Coordinates)
-Authing.isAuthenticated(user)
-Monitoring.verifyCheckIn(user)
-Alerting.activateEmergencyAlert(location)
+    Authing.isAuthenticated(user)
+    Monitoring.verifyCheckIn(user)
+    Alerting.activateEmergencyAlert(location)
 
 
 sync: checkIn(user: User)
-Authing.isAuthenticated(user)
-Monitoring.recordCheckIn(user)
+    Authing.isAuthenticated(user)
+    Monitoring.recordCheckIn(user)
 
 
 sync: failToCheckIn(user: User, out alert: Boolean)
-Authing.isAuthenticated(user)
-Monitoring.checkFailure(user, alert)
-Alerting.activateEmergencyAlert(location)
+    Authing.isAuthenticated(user)
+    Monitoring.checkFailure(user, alert)
+    Alerting.activateEmergencyAlert(location)
 
 
 sync: allowContent(user: User)
-Authing.isAuthenticated(user)
-Filtering.allowContent(user)
+    Authing.isAuthenticated(user)
+    Filtering.allowContent(user)
 
 
 sync: denyContent(user: User)
-Authing.isAuthenticated(user)
-Filtering.denyContent(user)
+    Authing.isAuthenticated(user)
+    Filtering.denyContent(user)
 
 
 sync: unregister(user: User)
-Authing.isAuthenticated(user)
-Authing.unregister(user)
+    Authing.isAuthenticated(user)
+    Authing.unregister(user)
 
 
 ## Dependency Diagram:
@@ -277,3 +272,5 @@ Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Co
            - Automatically share the user’s location during an emergency without confirmation.
            - Allow users to confirm or deny location sharing before sending the alert.
        - **Rationale**: Automatic sharing — In an emergency, time is critical, and the user may not be able to confirm their location manually (after confirming the emergency). Automatic sharing makes sure that help can be sent without delay. Permissions to location access can be given only to trusted contacts to prevent privacy concerns.
+
+Acknowledgements: Thank you to all the TAs, particularly TA Sophia for helping me with all my concepts and narrowing down my list along with the dependency diagrams!

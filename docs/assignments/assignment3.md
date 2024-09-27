@@ -27,21 +27,21 @@ Noor, let your light, light up the world!
 ## Synchronizations of Concept Actions
 
 ### Subsets
-{ Authing }
-{ Posting, Authing }
-{ Commenting, Posting, Authing }
-{ Filtering, Posting, Authing }
-{ Filtering, Commenting, Posting, Authing }
-{ Screenreading, Posting, Authing }
-{ Screenreading, Commenting, Posting, Authing }
-{ Screenreading, Filtering, Posting, Authing }
-{ Screenreading, Filtering, Commenting, Posting, Authing }
-{ Monitoring, Authing }
-{ Alerting, Authing }
-{ Monitoring, Alerting, Authing }
-{ Monitoring, Posting, Authing }
-{ Alerting, Posting, Authing }
-{ Monitoring, Alerting, Posting, Authing }
+\{Authing\}
+\{Posting, Authing\}
+\{Commenting, Posting, Authing\}
+\{Filtering, Posting, Authing\}
+\{Filtering, Commenting, Posting, Authing\}
+\{Screenreading, Posting, Authing\}
+\{Screenreading, Commenting, Posting, Authing\}
+\{Screenreading, Filtering, Posting, Authing\}
+\{Screenreading, Filtering, Commenting, Posting, Authing\}
+\{Monitoring, Authing\}
+\{Alerting, Authing\}
+\{Monitoring, Alerting, Authing\}
+\{Monitoring, Posting, Authing\}
+\{Alerting, Posting, Authing\}
+\{Monitoring, Alerting, Posting, Authing\}
 
 ### App Level & Synchronizations
 

@@ -1,5 +1,5 @@
 ---
-title: Assignment 1
+title: Assignment 1- Social Media Needfinding
 layout: doc
 ---
 
@@ -15,7 +15,7 @@ layout: doc
 I interviewed two visually impaired people who have used social media in the past. Dino is a 61-year-old man who has been blind since birth. He has used apps like Facebook (along with Messenger), LinkedIn, Twitter, Myspace, and a little bit of Mastodon and Whatsapp. Sheri is a 53-year-old woman who had sight but became completely blind a couple of years ago. She used apps like Facebook, MySpace, and Youtube when she was sighted and also when she became blind. Neither participants are currently associated with a college which makes them different from me in terms of age, experience, and disability. Dino being blind all his life gives him a deeper familiarity with accessibility tools, whereas Sheri losing her sight later, gives insight on the transition from sighted to visually impaired use of social media. I chose to interview people with visual impairments from my previous projects helping this marginalized community. In high school, I built an app using the MIT App Inventor to help provide scribes to students with visual disability in government schools in Bangalore, India and in college, making generative AI more accessible. Having friends and family with visual impairments has also motivated me to continue developing similar projects!
 
 - Recruiting participants:
-I recruited participants via emailing local disability organizations in the New England area to see who would be interested in this study. Four participants replied but only two participants followed up and agreed to participate in the interview given that there was no compensation. 
+I recruited participants via emailing local disability organizations in the New England area to see who would be interested in this study. Four participants replied but only two participants followed up and agreed to participate in the interview given that there was no compensation.
 
 - The interview process:
 I have attached the links to the questions I asked them and also some notes I took during the interview. There are more detailed notes further down this page in the Interview Report. 

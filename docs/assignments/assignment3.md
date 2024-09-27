@@ -44,7 +44,7 @@ Noor, let your light, light up the world!
 { Monitoring, Alerting, Posting, Authing }
 
 ### App Level & Synchronizations
-Include: Authing, Posting[Authing.User], Commenting[Posting.Post], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User]
+- Include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
 
 sync: register(username: String, password: String, out user: User)
 Authing.register(username, password, user)
@@ -97,9 +97,6 @@ Authing.unregister(user)
 <img src="./images/dependencyDiagram.jpg" alt="Dependency Diagram Example" width="300px">
 
 ## Wireframes
-
-Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Convergent-Design-Wireframes?node-id=0-1&node-type=canvas&t=soynBACGuQeCaQK1-0 
-
 
 ## Design tradeoffs:
 - List of 5 tradeoffs:

@@ -46,8 +46,10 @@ Noor, let your light, light up the world!
 ### App Level & Synchronizations
 
 ## Dependency Diagram:
+<img src="./images/dependencyDiagram.jpg" alt="Dependency Diagram Example" width="300px">
 
 
 ## Wireframes
+Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Convergent-Design-Wireframes?node-id=0-1&node-type=canvas&t=FoelDIJpfNiUQHZA-0 
 
 ## Design tradeoffs:

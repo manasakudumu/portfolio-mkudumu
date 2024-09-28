@@ -9,9 +9,9 @@ layout: doc
 
 - **Noor**, meaning “light” in Arabic, was made to shine a light on the social media world for elderly users with visual impairments. The purpose of Noor is to fill in the gaps created by mainstream social media apps like Facebook, Discord, and other social media apps, which struggle to make their features accessible to visually impaired users. Noor **prevents frustrations** of unlabelled buttons, inaccessible posts, and confusing layouts that these apps are known to possess. 
 
-- By offering emergency alerting, message filtering (to reduce exposure to biases and harmful stereotypes), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. 
+- By offering emergency alerting, message filtering (to **reduce exposure to biases and harmful stereotypes**), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. 
 
-- Noor takes accessibility to the next level by providing an intuitive, frustration-free experience designed for elderly users, with features that bridge the gap between independence and safety. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
+- Noor takes **accessibility to the next level** by providing an intuitive, frustration-free experience designed for elderly users, with features that bridge the gap between independence and safety. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
 
 - Noor, let your light, light up the world!
 <br>
@@ -174,19 +174,17 @@ sync applyFilterComments(user: User, settings: Rule)
 ```
 sync activateEmergencyAlert(user: User, location: Coordinates)
     Authing.isAuthenticated(user)
-    Monitoring.verifyCheckIn(user)
     Alerting.activateEmergencyAlert(location)
+```
+```
+sync dismissEmergencyAlert(user: User)
+    Authing.isAuthenticated(user)
+    Alerting.deactivateEmergencyAlert()
 ```
 ```
 sync checkIn(user: User)
     Authing.isAuthenticated(user)
     Monitoring.recordCheckIn(user)
-```
-```
-sync failToCheckIn(user: User, out alert: Boolean)
-    Authing.isAuthenticated(user)
-    Monitoring.checkFailure(user, alert)
-    Alerting.activateEmergencyAlert(location)
 ```
 ```
 sync allowContent(user: User)

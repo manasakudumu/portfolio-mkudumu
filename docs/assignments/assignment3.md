@@ -11,12 +11,13 @@ layout: doc
 
 - By offering emergency alerting, message filtering (to reduce exposure to biases and harmful stereotypes), and a simple screen-reader optimized navigation and user interface for streamlined screen reader usage, Noor allows users to engage with their friends and family without frustrations. 
 
-- We wish to **promote independence** while maintaining a sense of support at the same time with the help of location sharing and alerts during emergencies. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
+- Noor takes accessibility to the next level by providing an intuitive, frustration-free experience designed for elderly users, with features that bridge the gap between independence and safety. By placing a focus on accessibility, safety, and social connection, Noor aims to offer support to a severely marginalized community in the social media space. Let Noor be the light that connects and supports visually impaired elders, without any barriers.
 
 - Noor, let your light, light up the world!
 <br>
 
 ## Functional Design:
+- all concepts containing extrinsic dependencies only
 
 ### Concept 1: Authing
 - **Purpose:** Authenticates users and ensures login.
@@ -60,26 +61,22 @@ layout: doc
 - **Operational Principle**: Comments can be added to any "item" (posts, messages). The Commenting concept is abstract and does not directly reference other concepts.
 - **State:**
     - comments: set Comment
-    - commentedOn: comments one-to-one Item
-    - replies: comments one-to-many set Comment
+    - commentedOn: comments → one Item
+    - replies: comments → many set Comment
 - **Actions:**
     - commentOnItem (itemId: String, comment: String)
         - comment not in comments
         - comments += comment
         - commentedOn[comment] := itemId
-    - replyToComment (commentId: String, reply: String)
-        - reply not in replies[commentId]
-        - replies[commentId] += reply
     - deleteComment (commentId: String)
         - commentId in comments
         - comments -= commentId
 
-### Concept 4: Screen-reading
-- **Purpose:** Makes sure to use voice navigation and ensure that the apps content is not only screen reader accessible but also  
+### Concept 4: Reading/ Optimization-ing
+- **Purpose:** Ensures that all content in the app is fully optimized for screen readers, providing enhanced accessibility through clear labeling, logical structure, and streamlined navigation to enable visually impaired users to easily consume and interact with posts and other app elements.  
 - **Operational Principle**: Rather than implementing a separate reading mechanism, the app is structured with clear labels, logical flow, and summarized content to make it easier for screen readers to navigate and present information efficiently.
 - **State:**
     - contentStructure: set Page
-    - ariaRegions: contentStructure one-to-many set ARIA_Regions
     - summarizedContent: posts → one String
     - accessibleLabels: set Element  → one String
 - Actions
@@ -94,15 +91,13 @@ layout: doc
 - **Purpose:** Allow users to filter their feed to prioritize content from close friends or family to prevent biases/ harmful stereotypes against the disability community.
 - **Operational Principle**: Users define rules that determine the visibility of posts and other content in their feed.
 - **State:**
-    - filterSettings: set User one-to-many set Rule
-    - priorityGroups: set User
+    - filterSettings: set User → many set Rule
 - **Actions:**
-    - applyFilter (settings: Rule)
-        - settings not in filterSettings
-        - filterSettings += settings
-    - addToPriorityGroup (userId: String)
-        - userId in priorityGroups
-        - priorityGroups += userId
+    - applyFilter(userId: User, settings: Rule)
+        - settings not in filterSettings[userId]
+        - filterSettings[userId] += settings
+    - filterContent(content: Item, settings: Rule)
+        - content is visible or hidden based on filter
 
 ### Concept 6: Alerting/Locating
 - **Purpose:** Allow users to send emergency alerts along with location data to trusted contacts.
@@ -136,13 +131,12 @@ layout: doc
         - userId in checkInSchedule
         - userCheckInStatus[userId] := true
     - alertContacts (userId: String)
-        - userCheckInStatus[userId] == false
-        - notify trustedContacts[userId]
+        - if userCheckInStatus[userId] == false: notify trustedContacts[userId]
 
 
 ## Synchronizations of concept actions:
 
-include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Screenreading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
+include: Authing, Posting[Authing.User ], Commenting[Posting.Post ], Reading[Posting.Post, Commenting.Comment], Monitoring[Authing.User ], Filtering[Posting.Post, Commenting.Comment], Alerting[Monitoring.User ]
 
 ```
 sync register(username: String, password: String, out user: User)
@@ -157,19 +151,25 @@ sync authenticate(username: String, password: String, out user: User)
 sync post(user: User, p: Post)
     Authing.isAuthenticated(user)
     Posting.createPost(user, p)
-    Screenreading.labelElement(p)
+    Reading.labelElement(p)
 ```
 ```
 sync commentOnPost(user: User, postId: Post, comment: Comment)
     Authing.isAuthenticated(user)
     Commenting.commentOnItem(postId, comment)
-    Screenreading.labelElement(comment)
+    Reading.labelElement(comment)
 ```
 ```
 sync applyFilter(user: User, settings: Rule)
     Authing.isAuthenticated(user)
     Filtering.applyFilter(settings)
     Posting.filterPosts(settings)
+```
+```
+sync applyFilterComments(user: User, settings: Rule)
+    Authing.isAuthenticated(user)
+    Filtering.applyFilterComments(settings)
+    Comments.filterComments(settings)
 ```
 ```
 sync activateEmergencyAlert(user: User, location: Coordinates)
@@ -220,13 +220,13 @@ sync unregister(user: User)
 
 \{Filtering, Commenting, Posting, Authing\}
 
-\{Screenreading, Posting, Authing\}
+\{Reading, Posting, Authing\}
 
-\{Screenreading, Commenting, Posting, Authing\}
+\{Reading, Commenting, Posting, Authing\}
 
-\{Screenreading, Filtering, Posting, Authing\}
+\{Reading, Filtering, Posting, Authing\}
 
-\{Screenreading, Filtering, Commenting, Posting, Authing\}
+\{Reading, Filtering, Commenting, Posting, Authing\}
 
 \{Monitoring, Authing\}
 
@@ -241,22 +241,25 @@ sync unregister(user: User)
 \{Monitoring, Alerting, Posting, Authing\}
 
 ## Wireframes
-Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Convergent-Design-Wireframes?node-id=0-1&node-type=canvas&t=FoelDIJpfNiUQHZA-0 
+Link to Figma WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Convergent-Design-Wireframes?node-id=0-1&node-type=canvas&t=FoelDIJpfNiUQHZA-0 
 
 ## Design tradeoffs:
 - List of 5 tradeoffs:
+    <br>
    1. **Emergency alert confirmation**
        - Issue: Adding a confirmation step when users send an emergency alert.
        - **Options**:
            - Require users to confirm the alert to prevent triggering the alert accidentally.
            - Send alerts immediately without confirmation to avoid delays and when.
        - **Rationale**: Confirmation step — This would prevent accidental alerts that could cause unnecessary panic or strain on emergency contacts. Although this might add a slight delay in real emergencies, it ensures that false alarms are minimized, which is important (similar to the iPhone emergency feature).
+    <br>
    2. **Navigation simplicity vs. functionality**
        - Issue: Designing the navigation for elderly users, balancing between simplicity and access to multiple features.
        - **Options**:
            - Provide a simplified navigation bar with only key features (Home, Post, Search, Alert) - prioritizing screen reader navigation
            - Offer a more detailed navigation with all features visible (e.g., Settings, Profile, etc.).
        - **Rationale**: Simplified navigation — A minimal navigation bar with only the essential features was chosen to prevent overwhelming the users. Given the target audience (elderly visually impaired users), having fewer but larger buttons improves accessibility and ease of use. More complex navigation might offer quicker access to less-used features, but it could confuse users, especially while using a screen reader.
+    <br>
    3. **Increasing post accessibility**
        - Issue: Ensuring  users consistently add accessibility features (alt text or audio descriptions) to their posts and videos.
        - **Options**:
@@ -264,6 +267,7 @@ Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Co
            - Provide an optional reminder that can be dismissed.
            - Allow users to skip accessibility features entirely.
        - **Rationale**: Optional reminder — This would create a balance between the accessibility and user autonomy. While automatic prompts could increase accessibility compliance, they might feel intrusive, especially for elderly users. A reminder allows users to be encouraged, without forcing a strict workflow on them.
+    <br>
    4. **CAPTCHA for elderly users**
        - Issue: Using a CAPTCHA system that is accessible to elderly users with visual impairments.
        - **Options**:
@@ -271,6 +275,7 @@ Link to WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Co
            - Implement an audio-based CAPTCHA.
            - Offer both text-based and audio-based CAPTCHA options.
        - **Rationale**: Audio-based CAPTCHA — Chosen to meet the accessibility needs of visually impaired users, an audio-based CAPTCHA was the most suitable option. This ensures simplicity and accessibility.
+       <br>
    5. **Privacy vs. safety in location sharing**
        - Issue: Balancing user privacy with the need for quick response times during emergencies (after the alert is confirmed: from tradeoff 1)
        - **Options**:

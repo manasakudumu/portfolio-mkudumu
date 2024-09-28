@@ -73,7 +73,7 @@ layout: doc
         - comments -= commentId
 
 ### Concept 4: Reading/ Optimization-ing
-- **Purpose:** Ensures that all content in the app is fully optimized for screen readers, providing enhanced accessibility through clear labeling, logical structure, and streamlined navigation to enable visually impaired users to easily consume and interact with posts and other app elements.  
+- **Purpose:** Ensures that all content (messaging, alt-text on posts, etc.) in the app is fully optimized for screen readers, providing enhanced accessibility through clear labeling, logical structure, and streamlined navigation to enable visually impaired users to easily consume and interact with posts and other app elements.  
 - **Operational Principle**: Rather than implementing a separate reading mechanism, the app is structured with clear labels, logical flow, and summarized content to make it easier for screen readers to navigate and present information efficiently.
 - **State:**
     - contentStructure: set Page
@@ -256,8 +256,8 @@ Link to Figma WireFrames: https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3
    2. **Navigation simplicity vs. functionality**
        - Issue: Designing the navigation for elderly users, balancing between simplicity and access to multiple features.
        - **Options**:
-           - Provide a simplified navigation bar with only key features (Home, Post, Search, Alert) - prioritizing screen reader navigation
-           - Offer a more detailed navigation with all features visible (e.g., Settings, Profile, etc.).
+           - Provide a simplified navigation bar with only key features (Home, Post, Alert, etc.) - prioritizing screen reader navigation
+           - Offer a more detailed navigation with all features visible 
        - **Rationale**: Simplified navigation — A minimal navigation bar with only the essential features was chosen to prevent overwhelming the users. Given the target audience (elderly visually impaired users), having fewer but larger buttons improves accessibility and ease of use. More complex navigation might offer quicker access to less-used features, but it could confuse users, especially while using a screen reader.
     <br>
    3. **Increasing post accessibility**

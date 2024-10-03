@@ -18,5 +18,5 @@ layout: doc
 ## implementation for two concepts
 
 ## Initial outline of RESTful Routes
-
+<img src="./images/RESTful.jpg" alt="Initial RESTful Routes" width="250px">
 

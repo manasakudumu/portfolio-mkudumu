@@ -17,16 +17,16 @@ layout: doc
 
 ### App Definition
 ```
-app Achievemint
+app Noor
     include Authenticating
     include Posting[Author]
-    include Following[User]
-    include Trackering
-    include Collectioning[String]
-    include Leveling[Trackers, Collections]
-    include Summarizing[DefaultCollections]
+    include Commenting[Post]
+    include Filtering[User]
+    include Alerting[User]
+    include Monitoring[CheckInStatus, Schedule]
+    include Reading[Posts, Comments]
 ```
-<img src="./images/dataModel.jpg" alt="A$ data model" width="500px">
+<img src="./images/dataModel.jpg" alt="A$ data model" width="700px">
 
 
 ## implementation for two concepts

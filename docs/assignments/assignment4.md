@@ -3,7 +3,7 @@ title: Assignment 4- Backend (Alpha)
 layout: doc
 ---
 
-# Assignment 3- Backend (Alpha)
+# Assignment 4- Backend (Alpha)
 
 ## Important Links
 
@@ -15,8 +15,22 @@ layout: doc
 
 ## Abstract Data Models
 
+### App Definition
+```
+app Achievemint
+    include Authenticating
+    include Posting[Author]
+    include Following[User]
+    include Trackering
+    include Collectioning[String]
+    include Leveling[Trackers, Collections]
+    include Summarizing[DefaultCollections]
+```
+<img src="./images/dataModel.jpg" alt="A$ data model" width="500px">
+
+
 ## implementation for two concepts
-**Alerting:**
+### **Alerting:**
 ```ts
 import { ObjectId } from "mongodb";
 import DocCollection, { BaseDoc } from "../framework/doc";
@@ -70,7 +84,7 @@ export default class AlertingConcept {
 }
 ```
 
-**Monitoring:**
+### **Monitoring:**
 ```ts
 import { ObjectId } from "mongodb";
 import DocCollection, { BaseDoc } from "../framework/doc";

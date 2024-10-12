@@ -126,12 +126,12 @@ checkInSchedule: Contact -> one Date
 ```
 app Noor
     include Authenticating
-    include Posting[User, Item]
+    include Posting[Sessioning.User, Item]
     include Sessioning[User]
-    include Reading[Item, Message, Post]
-    include Messaging[User, Item]
-    include Alerting[User]
-    include Monitoring[User]
+    include Reading[Item, Messaging.Message, Posting.Post]
+    include Messaging[Sessioning.User, Item]
+    include Alerting[Sessioning.User]
+    include Monitoring[Sessioning.User]
 ```
 
 ### Abstract Data Model

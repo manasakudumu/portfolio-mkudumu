@@ -97,7 +97,13 @@ Operational Principle:
 after a user sends a message to another user, they can receive a message as well. 
 
 State:
-location: Alert -> one String
+userId: Alert -> one ObjectId; 
+street: Alert -> one string; 
+city:Alert -> one  string; 
+state: Alert -> one string;
+zipcode:Alert -> one string; 
+latitude:Alert -> one number; 
+longitude:Alert -> one number;
 emergencyContacts: Alert -> one User
 alertStatus: Alert -> one Boolean
 ```
@@ -131,6 +137,7 @@ app Noor
 ### Abstract Data Model
 Assignment 4-5
 <img src="./images/Assignment 4-5.jpg" alt="A$ data model" width="800px">
+(NOTE: Alert would have connections to multiple Strings for street, city, state, zipcode, Numbers for latitude, longitude, and an ObjectID array for trustedContacts)
 
 ## Data Representation and RESTful Routes:
  - Link to Backend Github repo: [Github repo](https://github.com/manasakudumu/noor-backend)

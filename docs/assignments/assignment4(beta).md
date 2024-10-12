@@ -1,5 +1,5 @@
 ---
-title: Assignment 4- Backend (Alpha)
+title: Assignment 4- Backend (Beta)
 layout: doc
 ---
 
@@ -115,9 +115,22 @@ trustedContacts: Contact -> one User
 status: Contact -> one Boolean
 checkInSchedule: Contact -> one Date
 ```
+
+### App Definition
+```
+app Noor
+    include Authenticating
+    include Posting[User, Item]
+    include Sessioning[User]
+    include Reading[Item, Message, Post]
+    include Messaging[User, Item]
+    include Alerting[User]
+    include Monitoring[User]
+```
+
 ### Abstract Data Model
 Assignment 4-5
-<img src="./images/Assignment 4-5.jpg" alt="A$ data model" width="700px">
+<img src="./images/Assignment 4-5.jpg" alt="A$ data model" width="800px">
 
 ## Data Representation and RESTful Routes:
  - Link to Backend Github repo: [Github repo](https://github.com/manasakudumu/noor-backend)
@@ -126,5 +139,11 @@ Assignment 4-5
 - Link to Vercel Deployment: [Vercel Deployment](https://vercel.com/manasa-kudumus-projects/noor_backend)
 
 ## Design Reflection
+- While designing and implementing the backend for my app, it revealed several ambiguities and omissions from my previous concepts in A3. Initially the design focused on features like commenting and filtering (biases and harm) which is when I realised that the commenting feature would not be required for that reason (due to harm online). Hence, I pivoted to the concepts with Messaging and Sessioning as these seemed more related to my storyboards from A2 and worked better with the implementation of my app. I received a lot of clarity after redrawing my data models (image above) to make the flows more cohesive.
+
+- I also worked on implementing a reCAPTCHA API (imported axios). This decision was made after further reflecting on my interview with Dino where he emphasized the importance of including a basic CAPTCHA that can be read by a screenreader instead of an image. I hence found it important to include. This was a significant challenge for me, trying to figure out how to manage the API responses without working on my frontend framework, but I hope to improve this on A5!
+
+## Acknowledgements:
+Thank you to TA Sophia for helping me figure out how to implement the Google reCAPTCHA API and helping me with my RESTful routes.
 
 

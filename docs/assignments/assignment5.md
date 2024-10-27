@@ -8,6 +8,7 @@ layout: doc
 ## Important Links
 - Link to A5 Github repo: [Github repo](https://github.com/manasakudumu/noor-frontend)
 - Link to Vercel Deployment: [Vercel Deployment](https://vercel.com/manasa-kudumus-projects/noor-frontend)
+- Link to Wireframes from A3: [Wireframes](https://www.figma.com/design/WKxhMFRzPR1yDqL3s9WpRt/A3%3A-Convergent-Design-Wireframes?node-id=0-1)
 
 ## Heuristic evaluation and writeup
 ### Usability:

@@ -1,9 +1,10 @@
 ---
-title: Assignment 5- Frontend (Beta)
+title: Assignment 6- User Testing
 layout: doc
 ---
 
 # Assignment 6- User Testing
+
 
 interface Task {
   title: string;
@@ -193,3 +194,6 @@ const improvementOpportunities: ImprovementOpportunity[] = [
 ];
 
 export { tasks, userTest1, userTest2, improvementOpportunities };
+
+
+- New Deployment: [Vercel Deployment](https://vercel.com/manasa-kudumus-projects/noor-frontend-1)

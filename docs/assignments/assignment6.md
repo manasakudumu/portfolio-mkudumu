@@ -6,8 +6,6 @@ layout: doc
 # Assignment 6- User Testing
 
 
-# Assignment 6 - User Testing
-
 ## Task List for User Testing
 
 | Title              | Description                                                              | Purpose                                                                                                     |
@@ -54,12 +52,12 @@ Vedhanandini, age 46, is testing Noor to see if it would help her mother, Lakshm
 
 ### Feedback
 
-- **Register:** Vedhanandini found the registration straightforward but noted that an option for biometrics would be helpful for elderly users.
+- **Register:** Vedhanandini found the registration straightforward but noted that an option for biometrics would be helpful for elderly users. Although she was very perplexed when she saw messages before she registered
 - **Emergency Alert:** She liked the placement of the emergency alert button but expected a confirmation message.
   - **Suggestions:** Add a vibration or confirmation for successful alert activation.
 - **Trusted Contacts:** She found adding and removing contacts smooth.
   - **Suggestions:** Consider adding a 'favorites' feature for main contacts.
-- **Messaging:** She found messaging user-friendly.
+- **Messaging:** She found messaging not very intuitive she found trouble searching and sending messages.
   - **Suggestions:** Add read receipts or message status indicators.
 - **Check-In:** She completed the check-in process easily.
   - **Suggestions:** Add reminders for routine check-ins at specific times.
@@ -84,8 +82,8 @@ Vedhanandini, age 46, is testing Noor to see if it would help her mother, Lakshm
    - **Solution:** Use icons along with text labels to improve differentiation and add clarity to the navigation.
 
 3. **Feedback on Messages and Posts (Information Scent)**
-   - **Issue:** Users were unsure if their posts and messages were visible to others or had been read.
-   - **Solution:** Add indicators or notifications to show if messages or posts are viewed by trusted contacts.
+   - **Issue:** Users were unsure if their posts and messages were visible to others or had been read. They also showed up on home page before login/ registration
+   - **Solution:** Add indicators or notifications to show if messages or posts are viewed by trusted contacts. Create a way to integrate the features only after login
 
 4. **Biometric or Alternative Login Options (Usability)**
    - **Issue:** Recalling passwords or IDs for login was difficult for elderly users.
@@ -94,8 +92,4 @@ Vedhanandini, age 46, is testing Noor to see if it would help her mother, Lakshm
 ---
 
 ### New Deployment
-- [Vercel Deployment](https://vercel.com/manasa-kudumus-projects/noor-frontend-1)
-
-
-
 - New Deployment: [Vercel Deployment](https://vercel.com/manasa-kudumus-projects/noor-frontend-1)

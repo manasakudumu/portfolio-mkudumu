@@ -19,16 +19,16 @@ layout: doc
 
 
 ## Comparables
-![Splitwise Transaction Tracking Feature](./splitwise-comp.png)<br>
+![Splitwise Transaction Tracking Feature](./images/splitwise-comp.jpg)<br>
 Could apply this transaction tracking feature for users to publicly see the sum of money in the pot
 
-![Among us emergency meeting feature](./amongus-comp.png)<br>
+![Among us emergency meeting feature](./images/amongus-comp.jpg)<br>
 This kind of stylized emergency button, alert notification used in Among Us is great at conveying the severity of the request. Could be useful to replicate this kind of alert for the SOS feature
 
-![Apple Widgets UI](./apple-comp.png)<br>
+![Apple Widgets UI](./images/apple-comp.jpg )<br>
 Chat Widgets in Apple messages could be very useful for accessing ROSCA group discussion and chats and direct messaging with other members
 
-![Uber Driver Rating UI](./uber-comp.png)<br>
+![Uber Driver Rating UI](./images/uber-comp.jpg)<br>
 Ability to see group member ranking could be modeled off of how uber drivers ratings are available on their personal profile (consistent across groups/rides).
 
 
@@ -75,5 +75,5 @@ Ability to see group member ranking could be modeled off of how uber drivers rat
 | Tracking | Allows the organizer to track how much money is circulating through set of users | the organizer will have access to how much each member of the group owes the group | 
 
 ## Storyboards
-![Emergency SOS feature flow](./Ashi_Storyboard.jpeg)<br>
-![Reminder feature flow](./Manasa_Story%20Board-1.jpg)<br>
+![Emergency SOS feature flow](./images/Ashi_Storyboard.jpeg)<br>
+![Reminder feature flow](./images/Manasa_Storyboard-1.jpg)<br>

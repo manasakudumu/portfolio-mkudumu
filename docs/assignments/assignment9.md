@@ -57,7 +57,30 @@ layout: doc
 - Rationale: Ashish has authored papers and extensively researches ROSCAs and hence, is a subject-matter expert in the field. Having talked to multiple people who participate in ROSCAs and advocating for marginalised communities who participate in these circles, Ashish’s feedback will help assess whether the app accurately represents these financial structures while balancing the needs of digitization and modern management tools.
 
 #### Prepopulated data
-- Include screenshot
+In order to prepopulate the website, we created many potential users, both organizers and members. For each of the user we were able to showcase multiple features like creating a group, joining a group, messaging in the groupchat, contributing and removing to the pot, notifying for late payments, sending SOS emergencies, generating a pot winner.
+
+These are the log in information for 2 accounts for an example profile:
+
+Log in as an Organizer:
+username: cambridge_organizer
+password: cambridge_organizer
+
+Log in as a Member:
+username: member1
+password: member 1
+
+Screenshots
+![Create group for organizer](./images/create.png)
+
+![Group View for organizer](./images/groups.png)
+
+![Invitation list for members to join rosca](./images/invites.png)
+
+![Group chat feature](./images/message.png)
+
+![Keep track of pot along with generating a winner](./images/account.png)
+
+![Reminder notification for the group](./images/remind.png)
 
 #### Task list
 **Prompt:**

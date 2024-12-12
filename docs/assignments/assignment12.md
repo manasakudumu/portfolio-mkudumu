@@ -147,7 +147,7 @@ layout: doc
      ```
 
 ## Dependency Diagram
-![Dependency diagram](../images/assignments/oscar-dependency.jpeg)
+![Dependency diagram](./images/oscar-dependency.jpeg)
 
 ## Synchronizations
 ```
